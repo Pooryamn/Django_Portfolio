@@ -9,6 +9,4 @@ class Project(models.Model):
     Image = models.ImageField(upload_to='portfolio/images/') # image will upload to this directory
     Url = models.URLField(blank=True)# balnk=True means the field will not be required
 
-
-
     
