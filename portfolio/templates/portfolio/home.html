@@ -11,9 +11,13 @@
         <h3>{{project.Title}}</h3>
         <p>{{project.Description}}</p>
         <br>
-        <img src="{{project.Image.url}}" height = 150 >
         {% if project.Url %}
-            <br><a href = "{{project.Url}}"> Link </a>
+            <br><a href = "{{project.Url}}"> 
+            <img src="{{project.Image.url}}" height = 150 >
+            </a>
+        {% else %}
+            <br>
+            <img src="{{project.Image.url}}" height = 150 >
         {% endif %}
         <br>
 
