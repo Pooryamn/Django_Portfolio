@@ -4,4 +4,18 @@
     <br>
     <br>
     <h1>Poorya mohammadi Nasab</h1>
+
+    {% for project in projects %}
+        <br>
+        <br>
+        <h3>{{project.Title}}</h3>
+        <p>{{project.Description}}</p>
+        <br>
+        <img src="{{project.Image.url}}" height = 150 >
+        {% if project.Url %}
+            <br><a href = "{{project.Url}}"> Link </a>
+        {% endif %}
+        <br>
+
+    {% endfor %}
 </div>
