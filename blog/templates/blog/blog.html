@@ -1,1 +1,16 @@
-<h1>Hi There</h1>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<div class="container text-center">
+	<br>
+	<br>
+	<h1>Blog</h1>
+	
+	{% for blog in blogs %}
+		<br>
+		<br>
+		<h2>{{blog.Title}}</h2>
+		<h5>{{blog.Date}}</h5>
+		<p>{{blog.Description}}</p>
+	{% endfor %}
+		
+</div>
