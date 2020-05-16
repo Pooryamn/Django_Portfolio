@@ -15,7 +15,7 @@
 		<br>
 		<a href="{% url 'detail' blog.id %}"><h2>{{blog.Title}}</h2></a>
 		<h5>{{blog.Date|date:'Y/M/d'}}</h5>
-		<p>{{blog.Description}}</p>
+		<p>{{blog.Description|truncatechars:100}}</p>
 	{% endfor %}
 		
 </div>
