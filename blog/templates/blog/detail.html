@@ -7,6 +7,6 @@
     <h1>{{ blog.Title }}</h1>
     <h5>{{blog.Date|date:'Y/M/d'}}</h5>
     <br>
-    <p>{{blog.Description}}</p>
+    <p>{{blog.Description|safe}}</p>
 
 </div>
