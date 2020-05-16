@@ -5,3 +5,6 @@ from .models import Blog
 def blog(request):
     Blogs = Blog.objects.all()
     return render(request,'blog/blog.html',{'blogs':Blogs})
+
+def detail(request,blog_id):
+    return render(request,'blog/detail.html',{'id':blog_id})
