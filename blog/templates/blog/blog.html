@@ -4,14 +4,17 @@
 	<br>
 	<br>
 	<h1>Blog</h1>
-
-	<h2>{{blogs.count}} Blogs Found</h2>
+	{% if blogs.count == 1 %}
+		<h2>{{blogs.count}} Blog Found</h2>
+	{% else %}
+		<h2>{{blogs.count}} Blogs Found</h2>
+	{% endif %}
 	
 	{% for blog in blogs %}
 		<br>
 		<br>
 		<a href="{% url 'detail' blog.id %}"><h2>{{blog.Title}}</h2></a>
-		<h5>{{blog.Date}}</h5>
+		<h5>{{blog.Date|date:'Y/M/d'}}</h5>
 		<p>{{blog.Description}}</p>
 	{% endfor %}
 		
